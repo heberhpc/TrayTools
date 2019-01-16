@@ -8,7 +8,7 @@ import domain.*;
 import org.jsoup.Jsoup;
 
 
-public class PlainTextDescriptionFiles {
+public class HTMLtoPlainTextFiles {
 	
 	public static void PlainTextFiles (ArrayList<Product> list) {
 		

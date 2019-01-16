@@ -7,9 +7,9 @@ import org.jsoup.Jsoup;
 
 import domain.*;
 import processes.ParsingProduct;
-import processes.PlainTextDescriptionFiles;
+import processes.HTMLtoPlainTextFiles;
 
-public class CreatePlainTextDescription {
+public class CreatePlainTextFiles {
 	
 	public static void main (String args[]) {
 		//create a array of productos
@@ -34,7 +34,7 @@ public class CreatePlainTextDescription {
 		
 		
 		//Create plaitext Files
-		PlainTextDescriptionFiles.PlainTextFiles(listOfProduct);
+		HTMLtoPlainTextFiles.PlainTextFiles(listOfProduct);
 		
 		
 		

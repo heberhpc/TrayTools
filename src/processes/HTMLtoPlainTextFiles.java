@@ -1,3 +1,5 @@
+//This static class contains methods to read a Array of Product Objects and create txt files from it description of each Product
+
 package processes;
 
 import java.io.File;
@@ -12,8 +14,6 @@ public class HTMLtoPlainTextFiles {
 	
 	public static void PlainTextFiles (ArrayList<Product> list) {
 		
-		
-		//
 		for (int i = 0 ; i < list.size() ; i++) {
 			
 			//get data
@@ -25,13 +25,12 @@ public class HTMLtoPlainTextFiles {
 			String folder = "data/plaintext";
 			String fileName = folder+"/"+ID+".txt";
 			
-			//plaintext formation
+			//plaintext formation	
+			String plainText="(Cód."+ID+")"+Jsoup.parse(description).text();
 			
-			String plainText = Jsoup.parse(description).text();
-			
-			
-			
+			//writing files
 			try {
+
 				FileWriter fr = new FileWriter(new File(fileName));
 				fr.write(plainText);
 				fr.close();
@@ -39,10 +38,7 @@ public class HTMLtoPlainTextFiles {
 			}catch (IOException e) {
 				System.out.println(e.getMessage());
 			}
-			
 		}
-		
 		System.out.println("writing Files Done!!!");
-		
 	}
 }

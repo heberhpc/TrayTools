@@ -16,30 +16,13 @@ public class CreatePlainTextFiles {
 		ArrayList<Product> listOfProduct = new ArrayList<Product>();
 		
 		//File csv containing a product per line (ID, NAME, DESCRIPTION)
-		File originalDesc = new File ("data/descricao_produtos - V0.csv");
+		File originalDesc = new File ("data/descricao_produtos.csv");
 		String delimiter = "\";\"";
 		
 		//Parse File Description and populate ArrayList
 		ParsingProduct.parseProductFile(originalDesc, delimiter, listOfProduct);
-		
-		//TEST
-		int idTest = 1719;
-		System.out.println(listOfProduct.get(idTest).getID());
-		System.out.println(listOfProduct.get(idTest).getName());
-		System.out.println(listOfProduct.get(idTest).getProductFullDescrciption());
-		
-		String html = listOfProduct.get(idTest).getProductFullDescrciption();
-		String plain = Jsoup.parse(html).text();
-		System.out.println(plain);
-		
-		
+						
 		//Create plaitext Files
 		HTMLtoPlainTextFiles.PlainTextFiles(listOfProduct);
-		
-		
-		
-		//
-		
 	}
-
 }

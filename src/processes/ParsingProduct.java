@@ -1,3 +1,5 @@
+//Class to read CSV files and parse it (Product Objects)
+
 package processes;
 
 import java.io.BufferedReader;
@@ -12,6 +14,8 @@ public class ParsingProduct {
 	
 	//Parse and create a Array of Product
 	public static void parseProductFile(File origin, String delimiter, List<Product>listOfProd) {
+		
+		//
 		try {
 			//buffer for the file
 			BufferedReader br = new BufferedReader(new FileReader(origin));
@@ -44,7 +48,7 @@ public class ParsingProduct {
 			System.out.println(e.getMessage());
 		}
 		
-		//Test
+		//Show information 
 		System.out.println("Parsing Sucessful");
 		System.out.println("Size of the Array " + listOfProd.size());
 	}

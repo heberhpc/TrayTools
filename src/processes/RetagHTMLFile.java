@@ -1,3 +1,5 @@
+//Class to read txt files and add hmlt tags
+
 package processes;
 
 import java.io.BufferedReader;
@@ -8,12 +10,12 @@ import java.io.IOException;
 
 public class RetagHTMLFile {
 	
-	
 	public static void RetagHTML(String originFolder, String destFolder) {
 		
+		//origin foldes
 		File folder = new File (originFolder);
 		
-		
+		//read all files inside de origin folder
 		File[] listOfFiles = folder.listFiles();
 		
 		for (int i = 0 ; i < listOfFiles.length ; i++ ) {

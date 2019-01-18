@@ -12,7 +12,7 @@ import org.jsoup.Jsoup;
 
 public class HTMLtoPlainTextFiles {
 	
-	public static void PlainTextFiles (ArrayList<Product> list) {
+	public static void PlainTextFiles (ArrayList<Product> list, String destFolder) {
 		
 		for (int i = 0 ; i < list.size() ; i++) {
 			
@@ -22,7 +22,8 @@ public class HTMLtoPlainTextFiles {
 			String description = list.get(i).getProductFullDescrciption();
 			
 			//file parameters
-			String folder = "data/plaintext";
+			String folder = destFolder;
+			boolean dir = new File(folder).mkdir();
 			String fileName = folder+"/"+ID+".txt";
 			
 			//plaintext formation	

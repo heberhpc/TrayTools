@@ -16,13 +16,14 @@ public class CreatePlainTextFiles {
 		ArrayList<Product> listOfProduct = new ArrayList<Product>();
 		
 		//File csv containing a product per line (ID, NAME, DESCRIPTION)
-		File originalDesc = new File ("data/descricao_produtos.csv");
+		File originalDesc = new File ("data/descricao/descricao_produtos.csv");
+		String folder = "data/descricao/plaintext";
 		String delimiter = "\";\"";
 		
 		//Parse File Description and populate ArrayList
 		ParsingProduct.parseProductFile(originalDesc, delimiter, listOfProduct);
 						
 		//Create plaitext Files
-		HTMLtoPlainTextFiles.PlainTextFiles(listOfProduct);
+		HTMLtoPlainTextFiles.PlainTextFiles(listOfProduct, folder);
 	}
 }

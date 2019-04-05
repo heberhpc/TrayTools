@@ -16,8 +16,8 @@ public class CreatePlainTextFiles {
 		ArrayList<Product> listOfProduct = new ArrayList<Product>();
 		
 		//File csv containing a product per line (ID, NAME, DESCRIPTION)
-		File originalDesc = new File ("data/descricao/descricao_produtos.csv");
-		String folder = "data/descricao/plaintext";
+		File originalDesc = new File ("data/descricao/artely/artely.csv");
+		String folder = "data/descricao/artely/plaintext";
 		String delimiter = "\";\"";
 		
 		//Parse File Description and populate ArrayList
